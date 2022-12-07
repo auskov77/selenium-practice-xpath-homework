@@ -1,4 +1,4 @@
-package ru.buttonone.methodPageLoad;
+package ru.buttonone.loadinghelper;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,8 +7,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class PageLoad {
-    public void pageLoad(WebDriver driver, By by) {
+public class LoadingHelper {
+    public void elementLoading(WebDriver driver, By by) {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             wait.until(ExpectedConditions.visibilityOfElementLocated(by));
