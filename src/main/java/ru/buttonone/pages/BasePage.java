@@ -3,7 +3,7 @@ package ru.buttonone.pages;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public abstract class BasePage {
-    public static ChromeDriver driver = new ChromeDriver();
+    public static final ChromeDriver driver = new ChromeDriver();
 
     static {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
