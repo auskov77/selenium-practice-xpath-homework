@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import ru.buttonone.loadinghelper.LoadingHelper;
+import ru.buttonone.helpers.LoadingHelper;
 import ru.buttonone.pages.Drive2Page;
 import ru.buttonone.pages.SearchingResultPage;
 import ru.buttonone.pages.YandexPage;
