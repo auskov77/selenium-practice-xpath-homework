@@ -6,11 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 @Getter
-public class Drive2AllBrandsOfCarsPage extends BasePage {
+public class Drive2Page extends BasePage {
     private final WebElement allBrandsOfCars
             = driver.findElement(By.xpath("//button[@class='x-box-more']"));
 
-    public Drive2AllBrandsOfCarsPage(WebDriver driver) {
+    private final WebElement searchByBrand
+            = driver.findElement(By.xpath("//h1[@class='x-header']"));
+
+    public Drive2Page(WebDriver driver) {
         super(driver);
     }
 }

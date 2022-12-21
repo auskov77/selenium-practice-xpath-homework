@@ -15,19 +15,10 @@ public class YandexPage extends BasePage {
         searchField = driver.findElement(By.xpath("//input[contains(@class, 'input')]"));
     }
 
-    public SearchingResultDrive2Page searchByPhraseOnDrive2PageAndClickEnter(String phrase) {
+    public SearchingResultPage searchByPhraseOnPageAndClickEnter(String phrase) {
         searchField.click();
         searchField.sendKeys(phrase);
         searchField.sendKeys(Keys.RETURN);
-        return new SearchingResultDrive2Page(driver);
+        return new SearchingResultPage(driver);
     }
-
-    public SearchingResultAsusPage searchByPhraseOnAsusPageAndClickEnter(String phrase) {
-        searchField.click();
-        searchField.sendKeys(phrase);
-        searchField.sendKeys(Keys.RETURN);
-        return new SearchingResultAsusPage(driver);
-    }
-
-
 }
