@@ -21,7 +21,7 @@ public class MyPageSearchElementsWithParallelTest extends BaseTest {
         SearchingResultPage searchingResultPage = yandexPage.searchByPhraseOnPageAndClickEnter("drive2");
 
         System.out.println("3. Кликнуть по ссылке официального сайта drive2");
-        searchingResultPage.getMySearchElementOnPageDrive2Ru().click();
+        searchingResultPage.getDrive2Element().click();
 
         System.out.println("4. Проверить, что есть кнопка с названием \"Все марки машин\"");
         ArrayList<String> mySearchingPage = new ArrayList<>(driver.getWindowHandles());
@@ -42,7 +42,7 @@ public class MyPageSearchElementsWithParallelTest extends BaseTest {
         SearchingResultPage searchingResultPage = yandexPage.searchByPhraseOnPageAndClickEnter("drive2");
 
         System.out.println("3. Кликнуть по ссылке официального сайта drive2");
-        searchingResultPage.getMySearchElementOnPageDrive2Ru().click();
+        searchingResultPage.getDrive2Element().click();
 
         System.out.println("4. Проверить, что есть блок с названием \"Искать по марке\"");
         ArrayList<String> mySearchingPage = new ArrayList<>(driver.getWindowHandles());
@@ -63,7 +63,7 @@ public class MyPageSearchElementsWithParallelTest extends BaseTest {
         SearchingResultPage searchingResultAsusPage = yandexPage.searchByPhraseOnPageAndClickEnter("asus.com");
 
         System.out.println("3. Кликнуть по ссылке официального сайта asus.com");
-        searchingResultAsusPage.getMySearchElementOnPageAsus().click();
+        searchingResultAsusPage.getAsusElement().click();
 
         System.out.println("4. Проверить, что есть блок с названием \"События и акции\"");
         ArrayList<String> mySearchingPage = new ArrayList<>(driver.getWindowHandles());
