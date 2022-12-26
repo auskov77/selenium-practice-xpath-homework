@@ -1,25 +1,19 @@
 package ru.buttonone.pages;
 
 import lombok.Getter;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 @Getter
 public class SearchingResultPage extends BasePage {
-    private final By mySearchElementOnPageDrive2Ru = By.xpath("//a[@href='https://www.drive2.ru/']");
+    @FindBy(xpath = "//a[@href='https://www.drive2.ru/']")
+    private WebElement mySearchElementOnPageDrive2Ru;
 
-    private final By mySearchElementOnPageAsus = By.xpath("//b[text()='asus.com']");
+    @FindBy(xpath = "//b[text()='asus.com']")
+    private WebElement mySearchElementOnPageAsus;
 
     public SearchingResultPage(WebDriver driver) {
         super(driver);
-    }
-
-    public WebElement getDrive2Element() {
-        return driver.findElement(mySearchElementOnPageDrive2Ru);
-    }
-
-    public WebElement getAsusElement() {
-        return driver.findElement(mySearchElementOnPageAsus);
     }
 }
