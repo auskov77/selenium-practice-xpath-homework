@@ -1,9 +1,7 @@
 package ru.buttonone.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import ru.buttonone.utils.Props;
 
 public class YandexPage extends BasePage {
@@ -16,9 +14,14 @@ public class YandexPage extends BasePage {
     }
 
     public SearchingResultPage searchByPhraseOnPageAndClickEnter(String phrase) {
-        searchField.click();
+        Actions actions = new Actions(driver);
+        actions.moveToElement(searchField).click().build().perform();
         searchField.sendKeys(phrase);
+
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", searchField);
+
         searchField.sendKeys(Keys.RETURN);
-        return new SearchingResultPage(driver);
+        return new SearchingResultPage(this.driver);
     }
 }
