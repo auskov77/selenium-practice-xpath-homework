@@ -22,6 +22,6 @@ public class YandexPage extends BasePage {
         executor.executeScript("arguments[0].click();", searchField);
 
         searchField.sendKeys(Keys.RETURN);
-        return new SearchingResultPage(this.driver);
+        return new SearchingResultPage(driver);
     }
 }
